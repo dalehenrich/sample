@@ -1,4 +1,4 @@
 
 !SamplePlatform class methodsFor: 'registration'!
 select
-	GRPlatform current: self new! !
+    SamplePlatform current: self new! !
