@@ -39,5 +39,15 @@ Metacello new
   load.
 ```
 
+or:
+
+```Smalltalk
+Metacello new
+  project: 'Sample';
+  version: '9ad1438cf44688940a8c7840897a567d0d20e341';
+  repository: 'github://dalehenrich/sample';
+  load.
+```
+
 [1]: https://github.com/dalehenrich/sample/tags
 [2]: https://github.com/dalehenrich/sample/commit/9ad1438cf44688940a8c7840897a567d0d20e341
