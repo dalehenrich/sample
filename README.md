@@ -30,11 +30,11 @@ Metacello new
   load.
 ```
 
-To load a commit for the project:
+To load an arbitrary commit for the project:
 
 ```Smalltalk
 Metacello new 
   project: 'Sample';
-  repository: 'github://dalehenrich/sample:1.1';
+  repository: 'github://dalehenrich/sample:9ad1438cf44688940a8c7840897a567d0d20e341';
   load.
 ```
