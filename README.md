@@ -30,7 +30,7 @@ Metacello new
   load.
 ```
 
-To load an arbitrary commit (9ad1438cf44688940a8c7840897a567d0d20e341) for the project:
+To load an arbitrary commit ( 9ad1438cf44688940a8c7840897a567d0d20e341 ) for the project:
 
 ```Smalltalk
 Metacello new 
