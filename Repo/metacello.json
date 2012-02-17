@@ -1,0 +1,36 @@
+[
+	{"baseline" : [
+		{"common" : 
+			[
+			{"package" : {
+				"name" : "Sample-Core",
+				"includes" : ["Sample-Platform"]}},
+			{"package" : {
+				"name" : "Sample-Platform",
+				"requires" : ["Sample-Core"]}},
+			{"package" : {
+				"name" : "Sample-Tests",
+				"requires" : ["Sample-Core"]}},
+			{"group" : {
+				"name" : "default",
+				"includes" : ["Sample-Core"]}},
+			{"group" : {
+				"name" : "Tests",
+				"includes" : ["Sample-Tests"]}}]},
+		{"pharo" : 
+			[
+			{"package" : {
+				"name" : "Sample-Platform",
+				"file" : "Sample-Platform.pharo"}}]},
+		{"squeak" : 
+			[
+			{"package" : {
+				"name" : "Sample-Platform",
+				"file" : "Sample-Platform.squeak"}}]},
+		{"gemstone" : 
+			[
+			{"package" : {
+				"name" : "Sample-Platform",
+				"file" : "Sample-Platform.gemstone"}}]}
+	]}
+]
