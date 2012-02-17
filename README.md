@@ -30,7 +30,7 @@ Metacello new
   load.
 ```
 
-To load an arbitrary commit (SHA: 9ad1438cf44688940a8c7840897a567d0d20e341 ) for the project:
+To load an arbitrary commit ([9ad1438] [2]) for the project:
 
 ```Smalltalk
 Metacello new 
@@ -40,3 +40,4 @@ Metacello new
 ```
 
 [1]: https://github.com/dalehenrich/sample/tags
+[2]: https://github.com/dalehenrich/sample/commit/9ad1438cf44688940a8c7840897a567d0d20e341
