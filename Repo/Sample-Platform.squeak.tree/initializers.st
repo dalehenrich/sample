@@ -1,1 +1,0 @@
-SampleSqueakPlatform initialize!
