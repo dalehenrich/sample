@@ -7,8 +7,8 @@ Metacello new
   load.
 ```
 
-The *repository* directory is a Monticello repository in [filetree] [1] format.
+The **repository** directory is a Monticello repository in [filetree] [1] format.
 
-The *doc* directory contains directories for *examples*, *scripts*, and *tutorials*. 
+The **doc** directory contains directories for **examples**, **scripts**, and **tutorials**. 
 
 [1]: https://github.com/dalehenrich/filetree
