@@ -13,4 +13,4 @@ Metacello new
   load.
 ```
 
-[1] https://github.com/dalehenrich/filetree
+[1]: https://github.com/dalehenrich/filetree
