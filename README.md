@@ -7,7 +7,7 @@ Metacello new
   load.
 ```
 
-The **repository** directory is a Monticello repository in [filetree] [1] format.
+The **Sample.source** directory contains the source and *Metacello project structure* for the project. For further information on the *Metacello project structure*, see the [README.md file](Sample.source/README.md) in the [Sample.source](Sample.source) directory.
 
 The **doc** directory contains directories for **examples**, **scripts**, and **tutorials**. 
 
