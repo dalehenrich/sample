@@ -44,14 +44,40 @@ And here's the **Metacello project** directory structure:
   |   +-Tests.spec
 ```
 
-In the directory structure above you see 
+In the directory structure above you see files and directories using the following extensions:
 
  * [.group](#group)
  * [.pkg](#pkg)
  * [.tree](#tree)
  * [.spec](#spec)
 
-## <a name="group"/>.group directory
+## .group directory<a name="group"/>
+The **.group** directory is optional. If a **.pkg** directory is located in a **.group** directory, then the package 
+becomes a member of the group. Therefore by including the *Core.pkg* directory in the *default.group* directory:
+
+```
++-Sample.source/
+  +-default.group/
+  | +-Core.pkg/
+```
+
+The package Sample-Core is included in the default group, which is equivalent to specifying the following:
+
+```Smalltalk
+spec group: 'default' with: #('Sample-Core')
+```
+
+Note that the full name of the package is derived from the directory structure. .group directories are 
+ignored for the puposes of naming packages. So the following directory structure:
+
+<pre>
++-<strong>Metacello</strong>.source/
+  +-default.group/
+  | +-<strong>Core</strong>.pkg/
+</pre>
+
+specifies a package named 'Metacello-Core'.
+
 ## .pkg directory<a name="pkg"/>
 ## .tree directory<a name="tree"/>
-## <a name="spec"/>.spec file
+## .spec file<a name="spec"/>
