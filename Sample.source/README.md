@@ -14,9 +14,12 @@ Here's the metacello spec for this project:
                 group: 'platform' with: #('Sample-Platform');
                 group: 'tests' with: #('Sample-Tests');
                 yourself ].
-    spec for: #'gemstone' do: [ spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.gemstone' ] ].
-    spec for: #'pharo' do: [ spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.pharo' ] ].
-    spec for: #'squeak' do: [ spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.squeak' ] ]
+    spec for: #'gemstone' do: [ 
+            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.gemstone' ] ].
+    spec for: #'pharo' do: [ 
+            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.pharo' ] ].
+    spec for: #'squeak' do: [ 
+            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.squeak' ] ]
 ```
 
 And here's the directory structure:
