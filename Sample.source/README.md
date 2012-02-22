@@ -6,20 +6,30 @@ Here's the **Metacello spec** for this project:
         do: [ 
             spec
                 package: 'Sample-Core' with: [ spec includes: 'Sample-Platform' ];
-                package: 'Sample-Platform' with: [ spec requires: 'Sample-Core' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ];
                 yourself.
             spec
                 group: 'default' with: #('Sample-Core');
-                group: 'platform' with: #('Sample-Platform');
                 group: 'tests' with: #('Sample-Tests');
                 yourself ].
-    spec for: #'gemstone' do: [ 
-            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.gemstone' ] ].
-    spec for: #'pharo' do: [ 
-            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.pharo' ] ].
-    spec for: #'squeak' do: [ 
-            spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.squeak' ] ]
+    spec
+        for: #'gemstone'
+        do: [ 
+            spec
+                package: 'Sample-Platform.gemstone' with: [ spec requires: 'Sample-Core' ];
+                group: 'platform' with: #('Sample-Platform.gemstone') ].
+    spec
+        for: #'pharo'
+        do: [ 
+            spec
+                package: 'Sample-Platform.pharo' with: [ spec requires: 'Sample-Core' ];
+                group: 'platform' with: #('Sample-Platform.pharo') ].
+    spec
+        for: #'squeak'
+        do: [ 
+            spec
+                package: 'Sample-Platform.squeak' with: [ spec requires: 'Sample-Core' ];
+                group: 'platform' with: #('Sample-Platform.squeak') ]
 ```
 
 And here's the **Metacello project** directory structure:
@@ -31,12 +41,14 @@ And here's the **Metacello project** directory structure:
   |   +-Core.tree/
   |   +-Core.spec
   +-platform.group/
-  | +-platform.spec
   | +-Platform.gemstone.pkg/
+  |   +-Platform.gemstone.spec
   |   +-Platform.gemstone.tree/
   | +-Platform.pharo.pkg/
+  |   +-Platform.pharo.spec
   |   +-Platform.pharo.tree/
   | +-Platform.squeak.pkg/
+  |   +-Platform.squeak.spec
   |   +-Platform.squeak.tree/
   +-tests.group/
   | +-Tests.pkg/
@@ -52,7 +64,9 @@ In the directory structure above you see files and directories using the followi
  * [.spec](#spec)
 
 ## .group directory<a name="group"/>
-The **.group** directory is optional. If a **.pkg** directory is located in a **.group** directory, then the package 
+The **.group** directory is optional. 
+
+If a **.pkg** directory is located in a **.group** directory, then the package 
 becomes a member of the group. Therefore by including the *Core.pkg* directory in the *default.group* directory:
 
 ```
@@ -69,6 +83,8 @@ spec group: 'default' with: #('Sample-Core')
 
 ## .pkg directory<a name="pkg"/>
 The **.pkg** directory defines a **Metacello package**.
+
+The **.pkg** directory typically contains a **.spec** (optional) and a **.tree** directory.
 
 ### Package naming<a name="pkgnaming"/>
 The full name of the package is derived from the directory structure. **.group** directories are 
