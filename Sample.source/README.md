@@ -51,7 +51,7 @@ In the directory structure above you see
  * [.tree](#tree)
  * [.spec](#spec)
 
-## <a name="group">.group directory</a>
-## .pkg directory<a title="pkg"/>
-## .tree directory<a title="tree"/>
+## <a name="group"/>.group directory
+## .pkg directory<a name="pkg"/>
+## .tree directory<a name="tree"/>
 ## <a name="spec"/>.spec file
