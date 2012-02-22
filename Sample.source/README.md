@@ -67,7 +67,11 @@ The package *Sample-Core* is included in the default group, which is equivalent 
 spec group: 'default' with: #('Sample-Core')
 ```
 
-Note that the full name of the package is derived from the directory structure. .group directories are 
+## .pkg directory<a name="pkg"/>
+The **.pkg** directory defines a *Metacello package*.
+
+### Package naming<a name="pkgnaming"/>
+The full name of the package is derived from the directory structure. **.group** directories are 
 ignored for the puposes of naming packages. So the following directory structure:
 
 <pre>
@@ -78,6 +82,5 @@ ignored for the puposes of naming packages. So the following directory structure
 
 specifies a package named *Metacello-Core*.
 
-## .pkg directory<a name="pkg"/>
 ## .tree directory<a name="tree"/>
 ## .spec file<a name="spec"/>
