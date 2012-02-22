@@ -34,27 +34,27 @@ Here's the **Metacello spec** for this project:
 
 And here's the **Metacello project** directory structure:
 
-```
-+-Sample.source/
+<pre>
++-<strong>Sample</strong>.source/
   +-default.group/
-  | +-Core.pkg/
+  | +-<strong>Core</strong>.pkg/
   |   +-Core.tree/
   |   +-Core.spec
   +-platform.group/
-  | +-Platform.gemstone.pkg/
+  | +-<strong>Platform.gemstone</strong>.pkg/
   |   +-Platform.gemstone.spec
   |   +-Platform.gemstone.tree/
-  | +-Platform.pharo.pkg/
+  | +-<strong>Platform.pharo</strong>.pkg/
   |   +-Platform.pharo.spec
   |   +-Platform.pharo.tree/
-  | +-Platform.squeak.pkg/
+  | +-<strong>Platform.squeak</strong>.pkg/
   |   +-Platform.squeak.spec
   |   +-Platform.squeak.tree/
   +-tests.group/
-  | +-Tests.pkg/
+  | +-<strong>Tests</strong>.pkg/
   |   +-Tests.tree/
   |   +-Tests.spec
-```
+</pre>
 
 In the directory structure above you see files and directories using the following extensions:
 
