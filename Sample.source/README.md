@@ -54,11 +54,9 @@ With packages defined in a directory structure, we can include additional inform
 directory itself.
 
 By combining the Metacello specifications with the classic Monticello package information, there is no longer a need to 
-manage a completely separate file of meta information.
+manage a completely separate file of project meta information (ConfigurationOfSample).
 
-In the following sections I will describe a proposal for the Metacello project structure.
-
-To start with, we'll used file extensions to denote the different structural elemsnts of the project:
+To start with, we'll used file extensions to denote the different structural elements of the project:
 
  * [.group](#group) - group 
  * [.pkg](#pkg) - Metacello package 
@@ -86,14 +84,17 @@ The **Sample.source** directory is the root of the project.
 
 The **default.group** defines the *default* group, which includes the **Core.pkg**.
 
-The **Core.pkg** defines a package whose full name is **Sample-Core**. The package name is constructed from the project root name the base name of the **.pkg** directory, no other structural components contribute to the *package name*.
+The **Core.pkg** defines a package whose full name is **Sample-Core**. The package name is 
+constructed from the project root name and the base name of the **.pkg** directory, no other 
+structural components contribute to the *package name*.
 
 The **Core.tree** directory contains the Monticello package source, the details of which are covered in a separate project (see the [FileTree project][1]).
 
 The **Core.spec** file contains the Metacello specification for the package:
 
 ```Smalltalk
-    ^ [ :spec | spec for: #'common' do: [ spec requires: 'Seaside' with: #('Base' 'Seaside-Email') ] ]
+    ^ [ :spec | spec for: #'common' do: [ 
+          spec requires: 'Seaside' with: #('Base' 'Seaside-Email') ] ]
 ```
 
 The spec indicates that the **Core.pkg** depends upon the *Base* and *Seaside-Email* packages from the *Seaside* project.
@@ -137,7 +138,7 @@ spec group: 'default' with: #('Sample-Core')
 ## .pkg directory<a name="pkg"/>
 The **.pkg** directory defines a **Metacello package**.
 
-The **.pkg** directory contains a **.spec** and a **.tree** directory.
+The **.pkg** directory contains a **.spec** file and a **.tree** directory.
 
 ### Package naming<a name="pkgnaming"/>
 The full name of the package is derived from the directory structure. **.group** directories are 
