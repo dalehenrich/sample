@@ -1,4 +1,4 @@
-Here's the metacello spec for this project:
+Here's the **Metacello spec** for this project:
 
 ```Smalltalk
     spec
@@ -22,7 +22,7 @@ Here's the metacello spec for this project:
             spec package: 'Sample-Platform' with: [ spec file: 'Sample-Platform.squeak' ] ]
 ```
 
-And here's the directory structure:
+And here's the **Metacello project** directory structure:
 
 ```
 +-Sample.source/
@@ -43,3 +43,15 @@ And here's the directory structure:
   |   +-Tests.tree/
   |   +-Tests.spec
 ```
+
+In the directory structure above you see 
+
+ * [.group](.group)
+ * [.pkg](.pkg)
+ * [.tree](.tree)
+ * [.spec](.spec)
+
+## .group directory
+## .pkg directory
+## .tree directory
+## .spec file
