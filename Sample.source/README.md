@@ -5,7 +5,17 @@ Here's the **Metacello spec** for this project:
         for: #'common'
         do: [ 
             spec
-                package: 'Sample-Core' with: [ spec includes: 'Sample-Platform' ];
+                github: 'Seaside'
+                with: [ 
+                    spec
+                        loads: #('Base' 'Seaside-Email');
+                        repository: 'github://Seaside/Seaside30:3.0.6.3' ].
+            spec
+                package: 'Sample-Core'
+                    with: [ 
+                            spec
+                                includes: 'platform';
+                                requires: 'Seaside' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ];
                 yourself.
             spec
