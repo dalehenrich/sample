@@ -61,7 +61,7 @@ becomes a member of the group. Therefore by including the *Core.pkg* directory i
   | +-Core.pkg/
 ```
 
-The package Sample-Core is included in the default group, which is equivalent to specifying the following:
+The package *Sample-Core* is included in the default group, which is equivalent to specifying the following:
 
 ```Smalltalk
 spec group: 'default' with: #('Sample-Core')
@@ -76,7 +76,7 @@ ignored for the puposes of naming packages. So the following directory structure
   | +-<strong>Core</strong>.pkg/
 </pre>
 
-specifies a package named 'Metacello-Core'.
+specifies a package named *Metacello-Core*.
 
 ## .pkg directory<a name="pkg"/>
 ## .tree directory<a name="tree"/>
