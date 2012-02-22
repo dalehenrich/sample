@@ -46,12 +46,12 @@ And here's the **Metacello project** directory structure:
 
 In the directory structure above you see 
 
- * [.group](#.group)
- * [.pkg](#.pkg)
- * [.tree](#.tree)
- * [.spec](#.spec)
+ * [.group](#group)
+ * [.pkg](#pkg)
+ * [.tree](#tree)
+ * [.spec](#spec)
 
-## <a id=".group"/>.group directory
-## <a id=".pkg"/>.pkg directory
-## <a id=".tree"/>.tree directory
-## <a id=".spec"/>.spec file
+## .group directory<a id="group"/>
+## .pkg directory<a id="pkg"/>
+## .tree directory<a id="tree"/>
+## .spec file<a id="spec"/>
