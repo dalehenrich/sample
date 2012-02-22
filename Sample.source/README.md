@@ -84,7 +84,7 @@ spec group: 'default' with: #('Sample-Core')
 ## .pkg directory<a name="pkg"/>
 The **.pkg** directory defines a **Metacello package**.
 
-The **.pkg** directory typically contains a **.spec** (optional) and a **.tree** directory.
+The **.pkg** directory contains a **.spec** and a **.tree** directory.
 
 ### Package naming<a name="pkgnaming"/>
 The full name of the package is derived from the directory structure. **.group** directories are 
