@@ -54,4 +54,4 @@ In the directory structure above you see
 ## <a name="group">.group directory</a>
 ## .pkg directory<a title="pkg"/>
 ## .tree directory<a title="tree"/>
-## <a name="spec">.spec file</a>
+## <a name="spec"/>.spec file
