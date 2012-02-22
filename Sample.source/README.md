@@ -1,6 +1,24 @@
-# baseline spec<a name="baseline"/>
+# Metacello project structure for mcz-based projects<a name="monticello"/>
+Right now, a Monticello project is composed of a Metacello configuration package and a collection of the packages that contain the source code of the project.
 
-Here's the **baseline spec** for the Sample project:
+The source code is stored in a Monticello repository.
+The Monticello repository has a flat directory structure with a file for each version 
+of the packages. There is no structure to a Monticello repository:
+
+<pre>
++-Monticello repository/
+  | +-<strong>ConfigurationOfSample-dkh.1</strong>.mcz/
+  | +-<strong>ConfigurationOfSample-dkh.2</strong>.mcz/
+  | +-<strong>ConfigurationOfSample-dkh.3</strong>.mcz/
+  | +-<strong>Sample-Core-dkh.1</strong>.mcz/
+  | +-<strong>Sample-Core-dkh.2</strong>.mcz/
+  | +-<strong>Sample-Core-dkh.3</strong>.mcz/
+  | +-<strong>Sample-Core-dkh.4</strong>.mcz/
+  | +-<strong>Sample-Tests-dkh-1</strong>.mcz/
+  | +-<strong>Sample-Tests-dkh-2</strong>.mcz/
+</pre>
+
+The project structure is provided by the baseline version specification:
 
 ```Smalltalk
     spec
@@ -23,8 +41,33 @@ Here's the **baseline spec** for the Sample project:
                 yourself ]
 ```
 
-# Metacello Project structure<a name="structure"/>
-And here's the **Metacello project** directory structure for the Sample project:
+The specification defines required projects, package dependencies and package groupiungs.
+
+# Metacello Project structure for git-based projects<a name="git"/>
+
+In a git-based project it makes sense to 
+use the file system to define project structure. 
+Besides using directory structure for packages 
+we can use directories to define Metacello groups and packages.
+With packages defined in a directory structure, we can include additional information 
+(like required packages and projects) in the package 
+directory itself.
+
+By combining the Metacello specifications with the classic Monticello package information, there is no longer a need to 
+manage a completely separate file of meta information.
+
+In the following sections I will describe a proposal for the Metacello project structure.
+
+To start with, we'll used file extensions to denote the different structural elemsnts of the project:
+
+ * [.group](#group) - group 
+ * [.pkg](#pkg) - Metacello package 
+ * [.ref](#ref) - external project reference
+ * [.source](#source) - project root
+ * [.tree](#tree) - Monticello package
+ * [.spec](#spec) - Metacello meta information
+
+Here's the Metacello project structure for the Sample project described earlier: 
 
 <pre>
 +-<strong>Sample</strong>.source/
@@ -39,13 +82,39 @@ And here's the **Metacello project** directory structure for the Sample project:
   |   +-Tests.spec
 </pre>
 
-In the directory structure above you see files and directories using the following extensions:
+The **Sample.source** directory is the root of the project. 
 
- * [.group](#group)
- * [.pkg](#pkg)
- * [.ref](#ref)
- * [.tree](#tree)
- * [.spec](#spec)
+The **default.group** defines the *default* group, which includes the **Core.pkg**.
+
+The **Core.pkg** defines a package whose full name is **Sample-Core**. The package name is constructed from the project root name the base name of the **.pkg** directory, no other structural components contribute to the *package name*.
+
+The **Core.tree** directory contains the Monticello package source, the details of which are covered in a separate project (see the [FileTree project][1]).
+
+The **Core.spec** file contains the Metacello specification for the package:
+
+```Smalltalk
+    ^ [ :spec | spec for: #'common' do: [ spec requires: 'Seaside' with: #('Base' 'Seaside-Email') ] ]
+```
+
+The spec indicates that the **Core.pkg** depends upon the *Base* and *Seaside-Email* packages from the *Seaside* project.
+
+The **Seaside.ref** file contains the Metcello specification for the *Seaside* project:
+
+```Smalltalk
+    ^ [ :spec | 
+    spec
+        for: #'common'
+        do: [ 
+            spec
+               version: '3.0.6.3';
+               repository: 'github://Seaside/Seaside30/Seaside30.source' ] ]
+```
+
+The spec indicates that the **Seaside.ref** project is defined on github in the 
+https://github.com/Seaside/Seaside30 project, that version '3.0.6.3' (a tag, branch, or commit SHA) should be used, and
+that the project source is in the *Seaside30.source* directory.
+
+# Appendix
 
 ## .group directory<a name="group"/>
 The **.group** directory is optional. 
@@ -83,5 +152,12 @@ ignored for the puposes of naming packages. So the following directory structure
 specifies a package named *Metacello-Core*.
 
 ## .ref file<a name="ref"/>
+## .source directory<a name="source"/>
 ## .tree directory<a name="tree"/>
 ## .spec file<a name="spec"/>
+
+
+
+[1]: https://github.com/dalehenrich/filetree
+
+
