@@ -1,1 +1,0 @@
-SampleGemStonePlatform initialize!

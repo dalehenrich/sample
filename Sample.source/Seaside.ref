@@ -1,3 +1,10 @@
-    ^ [ :spec | spec for: #'common' do: [ 
-                spec github: 'Seaside30' with: [ spec repository: 'github://Seaside/Seaside30:3.0.6.3' ].
-          ] ]
+    ^ [ :spec | 
+    spec
+        for: #'common'
+        do: [ 
+            spec
+                project: 'Seaside30'
+                with: [ 
+                    spec
+                        version: '3.0.6.3';
+                        repository: 'github://Seaside/Seaside30/Seaside30.source' ] ] ]

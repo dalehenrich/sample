@@ -1,48 +1,30 @@
-Here's the **Metacello spec** for this project:
+# baseline spec<a name="baseline"/>
+
+Here's the **baseline spec** for the Sample project:
 
 ```Smalltalk
     spec
         for: #'common'
         do: [ 
             spec
-                github: 'Seaside'
+                project: 'Seaside'
                 with: [ 
                     spec
+                        version: '3.0.6.3';
                         loads: #('Base' 'Seaside-Email');
-                        repository: 'github://Seaside/Seaside30:3.0.6.3' ].
+                        repository: 'github://Seaside/Seaside30/Seaside.source' ].
             spec
-                package: 'Sample-Core'
-                    with: [ 
-                            spec
-                                includes: 'platform';
-                                requires: 'Seaside' ];
+                package: 'Sample-Core' with: [ spec requires: 'Seaside' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ];
                 yourself.
             spec
                 group: 'default' with: #('Sample-Core');
                 group: 'tests' with: #('Sample-Tests');
-                yourself ].
-    spec
-        for: #'gemstone'
-        do: [ 
-            spec
-                package: 'Sample-Platform.gemstone' with: [ spec requires: 'Sample-Core' ];
-                group: 'platform' with: #('Sample-Platform.gemstone') ].
-    spec
-        for: #'pharo'
-        do: [ 
-            spec
-                package: 'Sample-Platform.pharo' with: [ spec requires: 'Sample-Core' ];
-                group: 'platform' with: #('Sample-Platform.pharo') ].
-    spec
-        for: #'squeak'
-        do: [ 
-            spec
-                package: 'Sample-Platform.squeak' with: [ spec requires: 'Sample-Core' ];
-                group: 'platform' with: #('Sample-Platform.squeak') ]
+                yourself ]
 ```
 
-And here's the **Metacello project** directory structure:
+# Metacello Project structure<a name="structure"/>
+And here's the **Metacello project** directory structure for the Sample project:
 
 <pre>
 +-<strong>Sample</strong>.source/
@@ -50,16 +32,7 @@ And here's the **Metacello project** directory structure:
   | +-<strong>Core</strong>.pkg/
   |   +-Core.tree/
   |   +-Core.spec
-  +-platform.group/
-  | +-<strong>Platform.gemstone</strong>.pkg/
-  |   +-Platform.gemstone.spec
-  |   +-Platform.gemstone.tree/
-  | +-<strong>Platform.pharo</strong>.pkg/
-  |   +-Platform.pharo.spec
-  |   +-Platform.pharo.tree/
-  | +-<strong>Platform.squeak</strong>.pkg/
-  |   +-Platform.squeak.spec
-  |   +-Platform.squeak.tree/
+  +-Seaside.ref
   +-tests.group/
   | +-<strong>Tests</strong>.pkg/
   |   +-Tests.tree/
@@ -70,6 +43,7 @@ In the directory structure above you see files and directories using the followi
 
  * [.group](#group)
  * [.pkg](#pkg)
+ * [.ref](#ref)
  * [.tree](#tree)
  * [.spec](#spec)
 
@@ -108,5 +82,6 @@ ignored for the puposes of naming packages. So the following directory structure
 
 specifies a package named *Metacello-Core*.
 
+## .ref file<a name="ref"/>
 ## .tree directory<a name="tree"/>
 ## .spec file<a name="spec"/>

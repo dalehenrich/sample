@@ -1,1 +1,0 @@
-SamplePharoPlatform initialize!

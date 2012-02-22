@@ -1,7 +1,1 @@
-    ^ [ :spec | 
-    spec
-        for: #'common'
-        do: [ 
-            spec
-                includes: 'platform';
-                references: 'Seaside' with: #('Base' 'Seaside-Email') ] ]
+    ^ [ :spec | spec for: #'common' do: [ spec requires: 'Seaside' with: #('Base' 'Seaside-Email') ] ]
