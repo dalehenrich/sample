@@ -34,11 +34,7 @@ The project structure is provided by the baseline version specification:
             spec
                 package: 'Sample-Core' with: [ spec requires: 'Seaside' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ];
-                yourself.
-            spec
-                group: 'default' with: #('Sample-Core');
-                group: 'tests' with: #('Sample-Tests');
-                yourself ]
+                yourself. ]
 ```
 
 The specification defines required projects, package dependencies and package groupiungs.
@@ -58,7 +54,6 @@ manage a completely separate file of project meta information (ConfigurationOfSa
 
 To start with, we'll used file extensions to denote the different structural elements of the project:
 
- * [.group](#group) - group 
  * [.pkg](#pkg) - Metacello package 
  * [.ref](#ref) - external project reference
  * [.source](#source) - project root
@@ -69,24 +64,19 @@ Here's the Metacello project structure for the Sample project described earlier:
 
 <pre>
 +-<strong>Sample</strong>.source/
-  +-default.group/
-  | +-<strong>Core</strong>.pkg/
-  |   +-Core.tree/
-  |   +-Core.spec
+  +-<strong>Core</strong>.pkg/
+  | +-Core.tree/
+  | +-Core.spec
   +-Seaside.ref
-  +-tests.group/
-  | +-<strong>Tests</strong>.pkg/
-  |   +-Tests.tree/
-  |   +-Tests.spec
+  +-<strong>Tests</strong>.pkg/
+  | +-Tests.tree/
+  | +-Tests.spec
 </pre>
 
 The **Sample.source** directory is the root of the project. 
 
-The **default.group** defines the *default* group, which includes the **Core.pkg**.
-
 The **Core.pkg** defines a package whose full name is **Sample-Core**. The package name is 
-constructed from the project root name and the base name of the **.pkg** directory, no other 
-structural components contribute to the *package name*.
+constructed from the project root name and the base name of the **.pkg** directory.
 
 The **Core.tree** directory contains the Monticello package source, the details of which are covered in a separate project (see the [FileTree project][1]).
 
@@ -117,37 +107,18 @@ that the project source is in the *Seaside30.source* directory.
 
 # Appendix
 
-## .group directory<a name="group"/>
-The **.group** directory is optional. 
-
-If a **.pkg** directory is located in a **.group** directory, then the package 
-becomes a member of the group. Therefore by including the *Core.pkg* directory in the *default.group* directory:
-
-```
-+-Sample.source/
-  +-default.group/
-  | +-Core.pkg/
-```
-
-The package *Sample-Core* is included in the default group, which is equivalent to specifying the following:
-
-```Smalltalk
-spec group: 'default' with: #('Sample-Core')
-```
-
 ## .pkg directory<a name="pkg"/>
 The **.pkg** directory defines a **Metacello package**.
 
 The **.pkg** directory contains a **.spec** file and a **.tree** directory.
 
 ### Package naming<a name="pkgnaming"/>
-The full name of the package is derived from the directory structure. **.group** directories are 
-ignored for the puposes of naming packages. So the following directory structure:
+The full name of the package is derived from the directory structure. 
+So the following directory structure:
 
 <pre>
 +-<strong>Metacello</strong>.source/
-  +-default.group/
-  | +-<strong>Core</strong>.pkg/
+  +-<strong>Core</strong>.pkg/
 </pre>
 
 specifies a package named *Metacello-Core*.
