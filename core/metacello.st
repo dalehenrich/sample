@@ -13,24 +13,21 @@
                     spec
                         version: '3.0.6.3';
                         repository: 'github://Seaside/Seaside30/Seaside.source' ].
-            spec 
-                package: 'Sample-Core'
-                    with: [ spec requires: 'Seaside30' ];
-                package: 'Sample-Tests'
-                    with: [ spec requires: 'Sample-Core' ].
             spec
-                for: #'gemstone'
-                do: [ 
-                    spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.gemstone' ].
-                    spec package: 'Sample-Platform.gemstone' with: [ spec requires: 'Sample-Core' ] ].
-            spec
-                for: #'pharo'
-                do: [ 
-                    spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.pharo' ].
-                    spec package: 'Sample-Platform.pharo' with: [ spec requires: 'Sample-Core' ] ].
-            spec
-                for: #'squeak'
-                do: [ 
-                    spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.squeak' ].
-                    spec package: 'Sample-Platform.squeak' with: [ spec requires: 'Sample-Core' ] ] ]
-].
+                package: 'Sample-Core' with: [ spec requires: 'Seaside30' ];
+                package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ] ].
+    spec
+        for: #'gemstone'
+        do: [ 
+            spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.gemstone' ].
+            spec package: 'Sample-Platform.gemstone' with: [ spec requires: 'Sample-Core' ] ].
+    spec
+        for: #'pharo'
+        do: [ 
+            spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.pharo' ].
+            spec package: 'Sample-Platform.pharo' with: [ spec requires: 'Sample-Core' ] ].
+    spec
+        for: #'squeak'
+        do: [ 
+            spec package: 'Sample-Core' with: [ spec includes: 'Sample-Platform.squeak' ].
+            spec package: 'Sample-Platform.squeak' with: [ spec requires: 'Sample-Core' ] ] ].
