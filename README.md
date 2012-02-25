@@ -11,7 +11,7 @@ Metacello new
 
 ```
 +-sample
-  +-doc\
+  +-doc/
   +-license.txt
   +-README.md
   +-repository/
