@@ -3,19 +3,19 @@
 <pre>
 +-src/
   +-Sample-Core.pkg\
-  | +-defs\
-  | | +-classes\
-  | | | +-SampleCore.class\
-  | | | | +-instance-side\
-  | | | | | +-SampleCore.st
-  | | | | | +-author.st
-  | | +-methods\
-  | | | +-Object.class\
-  | | | | +-instance-side\
-  | | | | | +-isSample.st
-  | +-.filetree
-  | +-package
-  | +-version
+    +-defs\
+    | +-classes\
+    | | +-SampleCore.class\
+    | |   +-instance-side\
+    | |     +-SampleCore.st
+    | |     +-author.st
+    | +-methods\
+    |   +-Object.class\
+    |     +-instance-side\
+    |       +-isSample.st
+    +-.filetree
+    +-package
+    +-version
 </pre>
   
 The [**.pkg**][7] directory is the root of the package structure. The **.filetree**, **package**, and **version** files contain package meta data.
