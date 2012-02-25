@@ -14,7 +14,8 @@
                         version: '3.0.6.3';
                         repository: 'github://Seaside/Seaside30/Seaside.source' ].
             spec 
-                package: 'Sample-Core';
+                package: 'Sample-Core'
+                    with: [ spec requires: 'Seaside30' ];
                 package: 'Sample-Tests'
                     with: [ spec requires: 'Sample-Core' ].
             spec
