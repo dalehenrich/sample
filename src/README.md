@@ -1,6 +1,6 @@
 ## Monticello Package Structure for file-based repositories
 
-The [**.pkg**][7] directory is the root of the package structure. The **.filetree*, **package**, and **version* files contain package meta data.
+The [**.pkg**][7] directory is the root of the package structure. The **.filetree**, **package**, and **version** files contain package meta data.
 
 The [**defs**][6] directory contains the Monticello definitions. The [**methods**][4] 
 subdirectory contains the extension method definitions organized by class
