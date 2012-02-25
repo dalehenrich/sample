@@ -13,20 +13,24 @@ Metacello new
 +-sample
   +-core/
   | +-Sample-Core.pkg\
-  |   +-definitions\
-  |   | +-classes\
-  |   | | +-SampleCore.class\
-  |   | |   +-instance-side\
-  |   | |     +-SampleCore.st
-  |   | |     +-author.st
-  |   | +-methods\
-  |   |   +-Object.class\
-  |   |     +-instance-side\
-  |   |       +-isSample.st
-  |   +-.filetree
-  |   +-metacello.st
-  |   +-package
-  |   +-version
+  | | +-definitions\
+  | | | +-classes\
+  | | | | +-SampleCore.class\
+  | | | |   +-instance-side\
+  | | | |     +-SampleCore.st
+  | | | |     +-author.st
+  | | | +-methods\
+  | | |   +-Object.class\
+  | | |     +-instance-side\
+  | | |       +-isSample.st
+  | | +-.filetree
+  | | +-metacello.st
+  | | +-package
+  | | +-version
+  | +-Sample-Platform.gemstone.pkg\
+  | +-Sample-Platform.pharo.pkg\
+  | +-Sample-Platform.squeak.pkg\
+  | +-Sample-Tests.pkg\
   +-doc/
   +-license.txt
   +-README.md
