@@ -1,0 +1,24 @@
+[
+	{"baseline" : [
+		{"common" : 
+			[
+			{"project" : {
+				"name" : "Seaside30",
+				"version" : "3.0.6.3",
+				"repositories" : [ "github://Seaside/Seaside30/Seaside.source"]}},
+			{"package" : {
+				"name" : "Sample-Core"}},
+			{"package" : {
+				"name" : "Sample-Tests",
+				"requires" : ["Sample-Core"]}},
+			{"group" : {
+				"name" : "default",
+				"includes" : ["Base"]}},
+			{"group" : {
+				"name" : "Base",
+				"includes" : ["Sample-Core"]}},
+			{"group" : {
+				"name" : "Tests",
+				"includes" : ["Sample-Tests"]}}]}
+	]}
+]
