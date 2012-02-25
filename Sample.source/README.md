@@ -25,14 +25,14 @@ The project structure is provided by the baseline version specification:
         for: #'common'
         do: [ 
             spec
-                project: 'Seaside'
+                project: 'Seaside30'
                 with: [ 
                     spec
                         version: '3.0.6.3';
                         loads: #('Base' 'Seaside-Email');
                         repository: 'github://Seaside/Seaside30/Seaside.source' ].
             spec
-                package: 'Sample-Core' with: [ spec requires: 'Seaside' ];
+                package: 'Sample-Core' with: [ spec requires: 'Seaside30' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ].
             spec
                 group: 'default' with: #('Base');
@@ -57,9 +57,7 @@ manage a completely separate file of project meta information (ConfigurationOfSa
 
 To start with, we'll used file extensions to denote the different structural elements of the project:
 
- * [.group](#group) - group specification
  * [.pkg](#pkg) - Metacello package 
- * [.ref](#ref) - external project reference
  * [.source](#source) - project root
  * [.tree](#tree) - Monticello package
  * [.spec](#spec) - Metacello meta information
@@ -68,11 +66,11 @@ Here's the Metacello project structure for the Sample project described earlier:
 
 <pre>
 +-<strong>Sample</strong>.source/
-  +-default.group
+  +-groups.spec
   +-<strong>Core</strong>.pkg/
   | +-Core.tree/
   | +-Core.spec
-  +-Seaside.ref
+  +-projects.spec
   +-<strong>Tests</strong>.pkg/
   | +-Tests.tree/
   | +-Tests.spec
@@ -99,7 +97,7 @@ package: spec name: name
                 package: name
                 with: [
                     spec
-                        requires: 'Seaside' with: #('Base' 'Seaside-Email');
+                        requires: 'Seaside30' with: #('Base' 'Seaside-Email');
                         groups: #('Base') ] ]
 
 ```
@@ -107,18 +105,19 @@ package: spec name: name
 The spec indicates that the **Core.pkg** depends upon the *Base* and *Seaside-Email* packages from the *Seaside* project
 and that the package is a member of the 'Base' group.
 
-The **Seaside.ref** file contains the Metcello specification for the *Seaside* project:
+The **projects.spec** file contains the Metcello specifications for the external projects that are referenced by packages in this 
+project:
 
 ```Smalltalk
 "
-project: spec name: name
-    <project: 'NameofProject' reference: 'NameOfFile'>
+project: spec
+    <project: 'NameofProject'>
 "
     spec
         for: #'common'
         do: [
             spec
-                projectReference: name
+                projectReference: 'Seaside30'
                 with: [
                     spec
                         version: '3.0.6.3';
@@ -126,23 +125,22 @@ project: spec name: name
 
 ```
 
-The spec indicates that the **Seaside.ref** project is defined on github in the 
+The spec indicates that the **Seaside30** project is defined on github in the 
 https://github.com/Seaside/Seaside30 project, that version '3.0.6.3' (a tag, branch, or commit SHA) should be used, and
 that the project source is in the *Seaside30.source* directory.
 
-The **default.group** file contains additional group specifications:
+The **groups.spec** file contains additional group specifications:
 
 ```Smalltalk
 "
-group: spec name: name
-    <project: 'ProjectName' group: 'groupName'>
+group: spec
+    <project: 'ProjectName'>
 "
-    spec for: #'common' do: [ spec group: name with: #('Base') ]
+    spec for: #'common' do: [ spec group: 'default' with: #('Base') ]
 ```
 
 # Appendix
 
-## .group file<a name="group"/>
 ## .pkg directory<a name="pkg"/>
 The **.pkg** directory defines a **Metacello package**.
 
@@ -159,7 +157,6 @@ So the following directory structure:
 
 specifies a package named *Metacello-Core*.
 
-## .ref file<a name="ref"/>
 ## .source directory<a name="source"/>
 ## .tree directory<a name="tree"/>
 ## .spec file<a name="spec"/>
