@@ -5,5 +5,5 @@ packagePlatformPharo: spec name: name
     spec
         for: #'pharo'
         do: [ 
-            spec package: 'Sample-Core' includes: name.
-            spec package: name with: [ spec requires: 'Sample-Core' ] ]! !
+            spec package: 'Core' includes: name.
+            spec package: name with: [ spec requires: 'Core' ] ]! !

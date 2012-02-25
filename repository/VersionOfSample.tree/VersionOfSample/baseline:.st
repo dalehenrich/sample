@@ -5,15 +5,22 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
-                project: 'Seaside'
+                project: 'Seaside30'
                 with: [ 
                     spec
                         version: '3.0.6.3';
-                        loads: #('Base' 'Seaside-Email');
                         repository: 'github://Seaside/Seaside30/Seaside.source' ].
-            spec
-                package: 'Sample-Core' with: [ spec requires: 'Seaside' ];
-                package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ].
+            spec spec
+                package: 'Sample-Core'
+                    with: [ 
+                            spec
+                                requires: 'Seaside30' with: #('Base' 'Seaside-Email');
+                                groups: #('Base') ];
+                package: 'Sample-Tests'
+                    with: [ 
+                            spec
+                                requires: 'Sample-Core';
+                                groups: #('Tests') ].
             spec
                 group: 'default' with: #('Base');
                 group: 'Base' with: #('Sample-Core');

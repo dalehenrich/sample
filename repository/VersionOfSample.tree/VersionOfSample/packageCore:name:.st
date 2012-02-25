@@ -9,5 +9,5 @@ packageCore: spec name: name
                 package: name
                 with: [ 
                     spec
-                        requires: 'Seaside' with: #('Base' 'Seaside-Email');
+                        requires: 'Seaside30' with: #('Base' 'Seaside-Email');
                         groups: #('Base') ] ]! !

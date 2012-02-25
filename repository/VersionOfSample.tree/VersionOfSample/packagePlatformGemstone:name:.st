@@ -5,5 +5,5 @@ packagePlatformGemstone: spec name: name
     spec
         for: #'gemstone'
         do: [ 
-            spec package: 'Sample-Core' includes: name.
-            spec package: name with: [ spec requires: 'Sample-Core' ] ]! !
+            spec package: 'Core' includes: name.
+            spec package: name with: [ spec requires: 'Core' ] ]! !

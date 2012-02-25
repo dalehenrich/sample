@@ -1,12 +1,12 @@
 
-!VersionOfSample methodsFor: 'project references'!
-projectSeaside: spec name: name
-    <project: 'Sample' reference: 'Seaside'>
+!VersionOfSample methodsFor: 'specs'!
+projects: spec
+    <project: 'Sample'>
     spec
         for: #'common'
         do: [ 
             spec
-                projectReference: name
+                projectReference: 'Seaside30'
                 with: [ 
                     spec
                         version: '3.0.6.3';
