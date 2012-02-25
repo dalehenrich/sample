@@ -1,7 +1,7 @@
-"
-package: spec name: name
-    <project: 'NameOfProject' package: 'NameOfPackage'>
-"
+
+!VersionOfSample methodsFor: 'packages'!
+packageTests: spec name: name
+    <project: 'Sample' package: 'Tests'>
     spec
         for: #'common'
         do: [ 
@@ -10,4 +10,4 @@ package: spec name: name
                 with: [ 
                     spec
                         requires: 'Core';
-                        groups: #('Tests') ] ]
+                        groups: #('Tests') ] ]! !

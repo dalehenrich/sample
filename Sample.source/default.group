@@ -1,0 +1,5 @@
+"
+group: spec name: name
+    <project: 'ProjectName' group: 'groupName'>
+"
+    spec for: #'common' do: [ spec group: name with: #('Base') ]

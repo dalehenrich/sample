@@ -1,8 +1,13 @@
-    ^ [ :spec |
+"
+project: spec name: name
+    <project: 'NameofProject' reference: 'NameOfFile'>
+"
     spec
         for: #'common'
-        do: [
+        do: [ 
             spec
-               version: '3.0.6.3';
-               repository: 'github://Seaside/Seaside30/Seaside30.source' ] ]
-
+                projectReference: name
+                with: [ 
+                    spec
+                        version: '3.0.6.3';
+                        repository: 'github://Seaside/Seaside30/Seaside30.source' ] ]

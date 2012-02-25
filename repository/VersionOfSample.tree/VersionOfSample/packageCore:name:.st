@@ -1,7 +1,7 @@
-"
-package: spec name: name
-    <project: 'NameOfProject' package: 'NameOfPackage'>
-"
+
+!VersionOfSample methodsFor: 'packages'!
+packageCore: spec name: name
+    <project: 'Sample' package: 'Core'>
     spec
         for: #'common'
         do: [ 
@@ -10,4 +10,4 @@ package: spec name: name
                 with: [ 
                     spec
                         requires: 'Seaside' with: #('Base' 'Seaside-Email');
-                        groups: #('Base') ] ]
+                        groups: #('Base') ] ]! !
