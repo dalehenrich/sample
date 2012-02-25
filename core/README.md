@@ -1,7 +1,7 @@
 ## Monticello Package Structure for file-based repositories
 
 <pre>
-+-src/
++-core/
   +-Sample-Core.pkg\
     +-definitions\
     | +-classes\
