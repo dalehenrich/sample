@@ -16,15 +16,11 @@ Metacello new
   +-metacello.json
   +-metacello.st
   +-README.md
-  +-repository/
   +-src/
 ```
 
 The **core** directory contains all of the packages  for this project. 
 See the [README.md file](src/README.md) in the [core](core) directory for more information.
-
-The **repository** is a filetree Monticello repository for utility packages not directly used in the project. See the 
-[README.md](repository/README.md) in the [repository](repository) directory for more information.
 
 The **doc** directory contains directories for **examples**, **scripts**, and **tutorials**. 
 

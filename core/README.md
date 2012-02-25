@@ -14,6 +14,8 @@
     |     +-instance-side\
     |       +-isSample.st
     +-.filetree
+    +-metacello.json
+    +-metacello.st
     +-package
     +-version
 </pre>
@@ -23,6 +25,10 @@ The [**.pkg**][7] directory is the root of the package structure. The **.filetre
 The [**definitions**][6] directory contains the Monticello definitions. The [**methods**][4] 
 subdirectory contains the extension method definitions organized by class
 and the [**classes**][3] subdirectory contains the class and method definitions organized by class.
+
+The **metacello.json** file is the metacello dependency information in json format.
+
+The **metacello.st** file is the metacello dependency information in metacello spec format.
 
 Here is an example of an [extension method for the class Object][5].
 
