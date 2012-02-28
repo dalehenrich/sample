@@ -36,9 +36,3 @@ Metacello new
   +-README.md
 ```
 
-The **core** directory contains all of the packages  for this project. 
-For addition information on the contects of the **core** directoyr, see
-the [README.md file](core/README.md) in the [core](core) directory for more information.
-
-The **doc** directory contains directories for **examples**, **scripts**, and **tutorials**. 
-
