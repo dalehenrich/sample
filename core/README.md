@@ -28,6 +28,6 @@ and the [**classes**](Sample-Core.pkg/snapshot/classes) subdirectory contains th
 
 Here is an example of an [extension method for the class Object](Sample-Core.pkg/snapshot/extensions/Object.class/instance-side/isSample.st).
 
-Here is an example of a [class definition for the class SampleCore](Sample-Core.pkg/snapshot/extensions/SampleCore.class/instance-side/SampleCore.st) 
+Here is an example of a [class definition for the class SampleCore](Sample-Core.pkg/snapshot/classes/SampleCore.class/instance-side/SampleCore.st) 
 and a [method
-definition for the class SampleCore](Sample-Core.pkg/snapshot/extensions/SampleCore.class/instance-side/authorName.st).
+definition for the class SampleCore](Sample-Core.pkg/snapshot/classes/SampleCore.class/instance-side/authorName.st).
