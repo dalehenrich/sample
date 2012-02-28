@@ -18,7 +18,7 @@
     +-version
 </pre>
   
-The [**.pkg**](/dalehenrich/sample/core/Sample-Core.pkg) directory is the root of the package structure. 
+The [**.pkg**](Sample-Core.pkg) directory is the root of the package structure. 
 The **.filetree**, **package**, and **version** files contain package meta data.
 
 The [**snapshot**](Sample-Core.pkg/snapshot) directory contains the Monticello definitions. 
