@@ -18,7 +18,7 @@
     +-version
 </pre>
   
-The [**.pkg**](core/Sample-Core.pkg) directory is the root of the package structure. The **.filetree**, **package**, and **version** files contain package meta data.
+The [**.pkg**](Sample-Core.pkg) directory is the root of the package structure. The **.filetree**, **package**, and **version** files contain package meta data.
 
 The [**snapshot**][6] directory contains the Monticello definitions. The [**extensions**][4] 
 subdirectory contains the extension method definitions organized by class
