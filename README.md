@@ -17,14 +17,16 @@ Metacello new
   | | +-snapshot\
   | | | +-classes\
   | | | | +-SampleCore.class\
-  | | | |   +-instance-side\
-  | | | |     +-SampleCore.st
+  | | | |   +-SampleCore.st
+  | | | |   +-instance\
   | | | |     +-author.st
   | | | +-extensions\
   | | |   +-Object.class\
-  | | |     +-instance-side\
+  | | |     +-instance\
   | | |       +-isSample.st
   | | +-.filetree
+  | | +-categories.st
+  | | +-initializers.st
   | | +-package
   | | +-version
   | +-Sample-Platform.gemstone.pkg\
