@@ -1,5 +1,5 @@
 
-!SampleSqueakPlatform classSide methodsFor: 'initialize-release'!
+!SampleSqueakPlatform class methodsFor: 'initialize-release'!
 initialize
     "self initialize"
 

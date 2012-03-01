@@ -1,4 +1,4 @@
 
-!SamplePlatform classSide methodsFor: 'registration'!
+!SamplePlatform class methodsFor: 'registration'!
 select
     SamplePlatform current: self new! !

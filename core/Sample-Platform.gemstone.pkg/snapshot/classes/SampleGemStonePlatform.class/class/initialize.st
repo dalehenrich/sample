@@ -1,5 +1,5 @@
 
-!SampleGemStonePlatform classSide methodsFor: 'initialize-release'!
+!SampleGemStonePlatform class methodsFor: 'initialize-release'!
 initialize
     "self initialize"
 

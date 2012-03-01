@@ -1,5 +1,5 @@
 
-!SamplePharoPlatform classSide methodsFor: 'initialize-release'!
+!SamplePharoPlatform class methodsFor: 'initialize-release'!
 initialize
     "self initialize"
 
