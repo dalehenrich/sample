@@ -8,7 +8,14 @@
         for: #'common'
         do: [ 
             spec
-                package: 'Sample-Core' with: [ spec includes: 'Sample-Platform' ]; 
+                github: 'External'
+                with: [ 
+                    spec repository: 'github://dalehenrich/external/core' ].
+            spec
+                package: 'Sample-Core' with: [ 
+                    spec
+                        requires: 'External';
+                        includes: 'Sample-Platform' ]; 
                 package: 'Sample-Platform' with: [ spec requires: 'Sample-Core' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ] ].
     spec

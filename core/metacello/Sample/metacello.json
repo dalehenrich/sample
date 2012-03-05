@@ -2,8 +2,12 @@
 	{"baseline" : [
 		{"common" : 
 			[
+			{"github" : {
+				"name" : "External",
+				"repositories" : [ "github://dalehenrich/external/core"]}},
 			{"package" : {
 				"name" : "Sample-Core",
+				"requires" : ["External"],
 				"includes" : ["Sample-Platform"]}},
 			{"package" : {
 				"name" : "Sample-Platform",
