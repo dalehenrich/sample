@@ -21,7 +21,7 @@ If you have cloned the git repository to your local disk, then use the following
 ```Smalltalk
 Metacello new
   project: 'Sample';
-  repository: 'filetree:/**<path to cloned repository>**/core';
+  repository: 'filetree://, pathToClonedRepository, '/core';
   load.
 ```
 
