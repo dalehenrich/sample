@@ -3,12 +3,11 @@
 		{"common" : 
 			[
 			{"project" : {
-				"name" : "Seaside30",
-				"version" : "3.0.6.3",
-				"repositories" : [ "github://Seaside/Seaside30/Seaside.source"]}},
+				"name" : "External",
+				"repositories" : [ "github://dalehenrich/external/core"]}},
 			{"package" : {
 				"name" : "Sample-Core",
-				"requires" : ["Seaside30"]}},
+				"requires" : ["External"]}},
 			{"package" : {
 				"name" : "Sample-Tests",
 				"requires" : ["Sample-Core"]}}]},

@@ -1,1 +1,39 @@
-../../metacello.json
+[
+	{"baseline" : [
+		{"common" : 
+			[
+			{"project" : {
+				"name" : "External",
+				"repositories" : [ "github://dalehenrich/external/core"]}},
+			{"package" : {
+				"name" : "Sample-Core",
+				"requires" : ["External"]}},
+			{"package" : {
+				"name" : "Sample-Tests",
+				"requires" : ["Sample-Core"]}}]},
+		{"gemstone" : 
+			[
+			{"package" : {
+				"name" : "Sample-Core",
+				"includes" : ["Sample-Platform.gemstone"]}},
+			{"package" : {
+				"name" : "Sample-Platform.gemstone",
+				"requires" : ["Sample-Core"]}}]},
+		{"pharo" : 
+			[
+			{"package" : {
+				"name" : "Sample-Core",
+				"includes" : ["Sample-Platform.pharo"]}},
+			{"package" : {
+				"name" : "Sample-Platform.pharo",
+				"requires" : ["Sample-Core"]}}]},
+		{"squeak" : 
+			[
+			{"package" : {
+				"name" : "Sample-Core",
+				"includes" : ["Sample-Platform.squeak"]}},
+			{"package" : {
+				"name" : "Sample-Platform.squeak",
+				"requires" : ["Sample-Core"]}}]}
+	]}
+]

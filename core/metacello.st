@@ -8,13 +8,11 @@
         for: #'common'
         do: [ 
             spec
-                project: 'Seaside30'
+                project: 'External'
                 with: [ 
-                    spec
-                        version: '3.0.6.3';
-                        repository: 'github://Seaside/Seaside30/Seaside.source' ].
+                    spec repository: 'github://dalehenrich/external/core' ].
             spec
-                package: 'Sample-Core' with: [ spec requires: 'Seaside30' ];
+                package: 'Sample-Core' with: [ spec requires: 'External' ];
                 package: 'Sample-Tests' with: [ spec requires: 'Sample-Core' ] ].
     spec
         for: #'gemstone'
