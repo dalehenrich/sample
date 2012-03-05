@@ -19,6 +19,8 @@ Metacello new
 If you have cloned the git repository to your local disk, then use the following to load the cloned version into your image:
 
 ```Smalltalk
+| pathToClonedRepository |
+pathToClonedRepository := 'path to root of cloned sample repository'.
 Metacello new
   project: 'Sample';
   repository: 'filetree://', pathToClonedRepository, '/core';
