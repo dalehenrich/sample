@@ -16,3 +16,12 @@ Metacello new
   get.
 ```
 
+If you have cloned the git repository to your local disk, then use the following to load the cloned version into your image:
+
+```Smalltalk
+Metacello new
+  project: 'Sample';
+  repository: 'filetree:/**<path to cloned repository>**/core';
+  load.
+```
+
