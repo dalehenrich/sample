@@ -1,6 +1,6 @@
 versions
-version080: spec
-    <version: '0.8'>
+version090: spec
+    <version: '0.9'>
     spec
         for: #'common'
         do: [ 
@@ -10,7 +10,4 @@ version080: spec
             spec timestamp: '6/17/2012 16:38' ].
     spec
         for: #'pharo'
-        do: [ 
-            spec
-                baseline: 'Sample'
-                with: [ spec repository: 'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ] ]
+        do: [ spec baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ] ]
