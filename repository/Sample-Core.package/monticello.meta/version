@@ -1,1 +1,1 @@
-(name 'Sample-Core-dkh.1' message 'initial version' id 'd8832581-0d0c-4ce5-b716-eaffe41e84ca' date '17 June 2012' time '4:29:34 pm' author 'dkh' ancestors () stepChildren ())
+(name 'Sample-Core-dkh.2' message 'checkpoint' id 'ae6c9f2f-b87c-4e7f-a0c8-58c9cf771778' date '17 June 2012' time '4:58:48 pm' author 'dkh' ancestors ((name 'Sample-Core-dkh.1' message 'initial version' id 'd8832581-0d0c-4ce5-b716-eaffe41e84ca' date '17 June 2012' time '4:29:34 pm' author 'dkh' ancestors () stepChildren ())) stepChildren ())
