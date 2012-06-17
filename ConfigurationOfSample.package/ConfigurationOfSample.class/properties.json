@@ -1,0 +1,16 @@
+{
+	"category" : "ConfigurationOfSample",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ConfigurationOfSample",
+	"pools" : [
+		 ],
+	"super" : "ConfigurationOf",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
