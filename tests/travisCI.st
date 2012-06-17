@@ -1,8 +1,6 @@
-"Load and run tests to be performed by TravisCI"
+"Load the Sample tests ... travis has already done a `git clone`"
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
-
-"load the Sample tests"
 Metacello new
 	baseline: 'Sample';
   repository: 'filetree://', gitPath, '/sample/repository';
