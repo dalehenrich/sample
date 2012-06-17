@@ -1,0 +1,16 @@
+{
+	"category" : "BaselineOfSample",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfSample",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
