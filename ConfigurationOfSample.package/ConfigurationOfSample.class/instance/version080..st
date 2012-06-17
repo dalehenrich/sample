@@ -7,7 +7,7 @@ version080: spec
             spec blessing: #'release'.
             spec description: 'initial release of Sample project'.
             spec author: 'dkh'.
-            spec timestamp: '6/17/2012 16:08' ].
+            spec timestamp: '6/17/2012 16:38' ].
     spec
         for: #'pharo'
-        do: [ spec baseline: 'Metacello' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ] ]
+        do: [ spec baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ] ]
