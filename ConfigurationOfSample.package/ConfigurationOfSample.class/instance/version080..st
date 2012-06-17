@@ -13,4 +13,7 @@ version080: spec
         do: [ 
             spec
                 baseline: 'Sample'
-                with: [ spec repository: 'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ] ]
+                with: [ 
+                    spec
+                        loads: 'ALL';
+                        repository: 'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ] ]

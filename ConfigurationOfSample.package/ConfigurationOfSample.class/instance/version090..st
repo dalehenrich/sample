@@ -4,10 +4,16 @@ version090: spec
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'release'.
-            spec description: 'initial release of Sample project'.
+            spec blessing: #'development'.
+            spec description: 'add ability to load groups, make it #common ... no platform-specific code involved'.
             spec author: 'dkh'.
-            spec timestamp: '6/17/2012 16:38' ].
-    spec
-        for: #'pharo'
-        do: [ spec baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ] ]
+            spec timestamp: '6/17/2012 16:51'.
+            spec
+                baseline: 'Core'
+                    with: [ 
+                            spec
+                                className: 'BaselineOfSample';
+                                loads: 'Core';
+                                repository: 'github://dalehenrich/sample:master/repository' ];
+                project: 'Tests' copyFrom: 'Core' with: [ spec loads: 'Tests' ].
+            spec group: 'default' with: 'Core' ]
