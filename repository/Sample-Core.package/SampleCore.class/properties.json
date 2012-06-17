@@ -1,0 +1,16 @@
+{
+	"category" : "Sample-Core",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/17/2012 16:23",
+	"instvars" : [
+		 ],
+	"name" : "SampleCore",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "Sample-Tests",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 6/17/2012 16:29",
+	"instvars" : [
+		 ],
+	"name" : "SampleTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
