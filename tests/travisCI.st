@@ -2,9 +2,9 @@
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
-	baseline: 'Sample';
+  baseline: 'Sample';
   repository: 'filetree://', gitPath, '/sample/repository';
-	load: 'Tests'.
+  load: 'Tests'.
 
 "Run the tests"
 TravisCIHarness
