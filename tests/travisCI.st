@@ -1,5 +1,13 @@
 "Load the Sample tests ... travis has already done a `git clone`"
 | gitPath |
+true 
+  ifTrue: [ "Tie Transcript to stdout"
+    FileDirectory default 
+      fileNamed: 'FileStream-show.st'
+      do: [:fileStream | fileStream fileIn ].
+    (Smalltalk associationAt: #Transcript) value: FileStream stdout ].
+Transcript cr; show: 'Loading Sample....'.
+
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
   baseline: 'Sample';
