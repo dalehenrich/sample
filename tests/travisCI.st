@@ -2,6 +2,7 @@
 | gitPath |
 true 
   ifTrue: [ "Tie Transcript to stdout"
+    MetacelloCommonMCSpecLoader retryPackageResolution: false.
     FileDirectory default 
       fileNamed: 'FileStream-show.st'
       do: [:fileStream | fileStream fileIn ].
