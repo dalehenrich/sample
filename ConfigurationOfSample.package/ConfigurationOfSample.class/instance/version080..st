@@ -9,12 +9,13 @@ version080: spec
             spec author: 'dkh'.
             spec timestamp: '6/17/2012 17:06'.
             spec
-                baseline: 'Core'
+                baseline: 'Sample'
                     with: [ 
                             spec
                                 className: 'BaselineOfSample';
-                                loads: 'Sample-Core';
+                                loads: #();
                                 repository:
                                         'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ];
-                project: 'Tests' copyFrom: 'Core' with: [ spec loads: 'Sample-Tests' ].
+                project: 'Core' copyFrom: 'Sample' with: [ spec loads: 'Core' ];
+                project: 'Tests' copyFrom: 'Sample' with: [ spec loads: 'Tests' ].
             spec group: 'default' with: #('Core') ]
