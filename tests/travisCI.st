@@ -2,7 +2,6 @@
 | gitPath |
 false 
   ifTrue: [ "Tie Transcript to stdout and skip retry logic"
-    MetacelloCommonMCSpecLoader retryPackageResolution: false.
     FileDirectory default 
       fileNamed: 'FileStream-show.st'
       do: [:fileStream | fileStream fileIn ].
