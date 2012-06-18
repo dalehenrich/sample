@@ -5,15 +5,16 @@ version090: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'add ability to load groups, make it #common ... no platform-specific code involved'.
+            spec description: 'working on the railroad'.
             spec author: 'dkh'.
-            spec timestamp: '6/17/2012 16:51'.
+            spec timestamp: '6/17/2012 17:10'.
             spec
-                baseline: 'Core'
+                baseline: 'Sample'
                     with: [ 
                             spec
                                 className: 'BaselineOfSample';
-                                loads: 'Core';
+                                loads: #();
                                 repository: 'github://dalehenrich/sample:master/repository' ];
-                project: 'Tests' copyFrom: 'Core' with: [ spec loads: 'Tests' ].
-            spec group: 'default' with: 'Core' ]
+                project: 'Core' copyFrom: 'Sample' with: [ spec loads: 'Sample-Core' ];
+                project: 'Tests' copyFrom: 'Sample' with: [ spec loads: 'Sample-Tests' ].
+            spec group: 'default' with: #('Core') ]

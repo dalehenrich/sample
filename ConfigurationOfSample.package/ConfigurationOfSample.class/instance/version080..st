@@ -7,13 +7,14 @@ version080: spec
             spec blessing: #'release'.
             spec description: 'initial release of Sample project'.
             spec author: 'dkh'.
-            spec timestamp: '6/17/2012 16:38' ].
-    spec
-        for: #'pharo'
-        do: [ 
+            spec timestamp: '6/17/2012 17:06'.
             spec
-                baseline: 'Sample'
-                with: [ 
-                    spec
-                        loads: 'ALL';
-                        repository: 'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ] ]
+                baseline: 'Core'
+                    with: [ 
+                            spec
+                                className: 'BaselineOfSample';
+                                loads: 'Sample-Core';
+                                repository:
+                                        'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ];
+                project: 'Tests' copyFrom: 'Core' with: [ spec loads: 'Sample-Tests' ].
+            spec group: 'default' with: #('Core') ]
