@@ -1,3 +1,3 @@
 tests
 testError
-    self assert: (SampleCore perform: #'foolish')
+    self should: [ SampleCore perform: #'foolish' ] raise: Error

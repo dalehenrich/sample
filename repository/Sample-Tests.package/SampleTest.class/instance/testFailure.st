@@ -1,3 +1,3 @@
 tests
 testFailure
-    self assert: Object new isSample
+    self deny: Object new isSample

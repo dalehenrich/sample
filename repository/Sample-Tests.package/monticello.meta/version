@@ -1,1 +1,1 @@
-(name 'Sample-Tests-dkh.1' message 'initial version' id '93e960ca-e315-440b-8bf5-2a79fca7c75b' date '17 June 2012' time '4:29:51 pm' author 'dkh' ancestors () stepChildren ())
+(name 'Sample-Tests-dkh.2' message 'tests shouldn''t fail' id '5d6ac98f-5be0-4fca-b31d-665ffa263226' date '18 June 2012' time '7:32:54 am' author 'dkh' ancestors ((name 'Sample-Tests-dkh.1' message 'initial version' id '93e960ca-e315-440b-8bf5-2a79fca7c75b' date '17 June 2012' time '4:29:51 pm' author 'dkh' ancestors () stepChildren ())) stepChildren ())
