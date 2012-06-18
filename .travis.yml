@@ -20,6 +20,7 @@ install:
    - source build_env_vars
    - ./build_clone.sh -g "-b pharo1.3 git://github.com/dalehenrich/filetree.git"
    - ./build_clone.sh -g "git://github.com/dalehenrich/metacello-work.git"
+   - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
 script:
