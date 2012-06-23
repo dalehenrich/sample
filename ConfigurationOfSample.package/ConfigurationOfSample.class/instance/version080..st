@@ -15,7 +15,7 @@ version080: spec
                                 className: 'BaselineOfSample';
                                 loads: #();
                                 repository:
-                                        'github://dalehenrich/sample:03fb7e433448fbdb91eb94d596cdd5890dcb32dd/repository' ];
+                                        'github://dalehenrich/sample:cc46e15368c6b7cf3667427faaf6167d35044f78/repository' ];
                 project: 'Core' copyFrom: 'Sample' with: [ spec loads: 'Core' ];
                 project: 'Tests' copyFrom: 'Sample' with: [ spec loads: 'Tests' ].
             spec group: 'default' with: #('Core') ]
