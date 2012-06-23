@@ -4,13 +4,13 @@ language: erlang
 #   baseline, stable version and version 0.9.0
 #   for Squeak4.3 and PharoCore-1.3
 #
-#   Expect travisCI failure for #stable variant
+#   No baseline on configuration branch
 
 env:
-   - ST=Squeak4.3 TRAVIS_SCRIPT=baselineTravisCI.st
+#   - ST=Squeak4.3 TRAVIS_SCRIPT=baselineTravisCI.st
    - ST=Squeak4.3 TRAVIS_SCRIPT=configuration090TravisCI.st
    - ST=Squeak4.3 TRAVIS_SCRIPT=configurationStableTravisCI.st
-   - ST=PharoCore-1.3 TRAVIS_SCRIPT=baselineTravisCI.st
+#   - ST=PharoCore-1.3 TRAVIS_SCRIPT=baselineTravisCI.st
    - ST=PharoCore-1.3 TRAVIS_SCRIPT=configuration090TravisCI.st
    - ST=PharoCore-1.3 TRAVIS_SCRIPT=configurationStableTravisCI.st
 
