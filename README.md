@@ -11,6 +11,8 @@ Metacello new
 ```
 
 ###TravisCI Status
-[![Build Status](https://secure.travis-ci.org/dalehenrich/sample.png?branch=master)](http://travis-ci.org/dalehenrich/sample)
+**master**: [![Build Status](https://secure.travis-ci.org/dalehenrich/sample.png?branch=master)](http://travis-ci.org/dalehenrich/sample)
+
+**configuration**: [![Build Status](https://secure.travis-ci.org/dalehenrich/sample.png?branch=configuration)](http://travis-ci.org/dalehenrich/sample)
 
 [1]: https://github.com/dalehenrich/metacello-work/blob/master/README.md

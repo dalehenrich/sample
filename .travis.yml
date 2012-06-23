@@ -1,10 +1,5 @@
 language: erlang
 
-# exclude configuration branch from builds
-branches:
-  except:
-    - configuration
-
 # build matrix
 #   baseline, stable version and version 0.9.0
 #   for Squeak4.3 and PharoCore-1.3
@@ -12,10 +7,10 @@ branches:
 #   Expect travisCI failure for #stable variant
 
 env:
-#   - ST=Squeak4.3 TRAVIS_SCRIPT=baselineTravisCI.st
-#   - ST=Squeak4.3 TRAVIS_SCRIPT=configuration090TravisCI.st
-#   - ST=Squeak4.3 TRAVIS_SCRIPT=configurationStableTravisCI.st
-#   - ST=PharoCore-1.3 TRAVIS_SCRIPT=baselineTravisCI.st
+   - ST=Squeak4.3 TRAVIS_SCRIPT=baselineTravisCI.st
+   - ST=Squeak4.3 TRAVIS_SCRIPT=configuration090TravisCI.st
+   - ST=Squeak4.3 TRAVIS_SCRIPT=configurationStableTravisCI.st
+   - ST=PharoCore-1.3 TRAVIS_SCRIPT=baselineTravisCI.st
    - ST=PharoCore-1.3 TRAVIS_SCRIPT=configuration090TravisCI.st
    - ST=PharoCore-1.3 TRAVIS_SCRIPT=configurationStableTravisCI.st
 
