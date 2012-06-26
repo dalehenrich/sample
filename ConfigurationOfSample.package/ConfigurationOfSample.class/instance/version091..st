@@ -12,5 +12,5 @@ version091: spec
             spec baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ].
             spec
                 group: 'default' with: #('Core');
-                group: 'Core' in: 'Sample' load: #('Core');
-                group: 'Tests' in: 'Sample' load: #('Tests') ]
+                group: 'TravisCI' import: 'Tests' from: 'Sample';
+                group: 'Core' import: 'Core' from: 'Sample' ]
