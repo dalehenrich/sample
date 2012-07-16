@@ -9,8 +9,6 @@ version091: spec
             spec description: 'shiny new group spec "group:in:load:"'.
             spec author: 'dkh'.
             spec timestamp: 'dkh 6/25/2012 16:55'.
-            spec baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ].
             spec
-                group: 'default' with: #('Core');
-                group: 'TravisCI' import: 'Tests' from: 'Sample';
-                group: 'Core' import: 'Core' from: 'Sample' ]
+                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ];
+                import: 'Sample' ]
