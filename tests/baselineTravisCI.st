@@ -3,12 +3,12 @@
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
   baseline: 'Sample';
-  repository: 'filetree://', gitPath, '/sample/repository';
+  repository: 'filetree://', gitPath, '/sample/packages';
   load: 'Tests'.
 
 "Run the tests"
 TravisCIHarness
   value: #( 'BaselineOfSample' )
-  value: 'TravisCISuccess.txt' 
+  value: 'TravisCISuccess.txt'
   value: 'TravisCIFailure.txt'.
 
