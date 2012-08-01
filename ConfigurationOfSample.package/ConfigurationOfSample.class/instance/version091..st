@@ -10,5 +10,5 @@ version091: spec
             spec author: 'dkh'.
             spec timestamp: 'dkh 6/25/2012 16:55'.
             spec
-                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/repository' ];
+                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/packages' ];
                 import: 'Sample' ]
