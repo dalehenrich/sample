@@ -14,5 +14,5 @@ version090: spec
                             spec
                                 className: 'BaselineOfSample';
                                 loads: #();
-                                repository: 'github://dalehenrich/sample:master/repository' ];
+                                repository: 'github://dalehenrich/sample:master/packages' ];
                 import: 'Sample' ]
