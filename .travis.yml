@@ -1,15 +1,8 @@
 language: erlang
 
-# build matrix
-#   baseline, stable version and version 0.9.0
-#   for Squeak4.3 and PharoCore-1.3
-#
-#   Expect travisCI failure for #stable variant
-
 env:
-   - ST=Pharo-1.4 BASELINE=Sample LOADS="'default' 'Tests'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
-   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="github://dalehenrich/sample:configuration"
-   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="github://dalehenrich/sample:configuration"
+   - ST=Pharo-1.4 BASELINE=Sample LOADS="'ALL'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
+   - ST=Squeak-4.4 BASELINE=Sample LOADS="'ALL'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
 
 install:
    - export PROJECT_HOME="$(pwd)"
@@ -21,4 +14,4 @@ install:
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script: $PROJECT_HOME/tests/testTravisCI.sh -verbose
+script: $PROJECT_HOME/tests/testTravisCI.sh # -verbose
