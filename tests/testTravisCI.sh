@@ -7,6 +7,8 @@
 # Copyright (c) 2013 VMware, Inc. All Rights Reserved <dhenrich@vmware.com>.
 #
 
+echo "--->$TRAVIS_BUILD_DIR"
+echo "`pwd`"
 
 if [ "${CONFIGURATION}x" = "x" ]; then
   if [ "${BASELINE}x" = "x" ]; then
@@ -15,15 +17,19 @@ if [ "${CONFIGURATION}x" = "x" ]; then
   else
     PROJECT_LINE="  baseline: '${BASELINE}';"
     VERSION_LINE=""
-    REPOSITORY_LINE="  repository: 'filetree://', (FileDirectory default directoryNamed: 'git_cache') fullName"
     FULL_CONFIG_NAME="BaselineOf${BASELINE}"
   fi
 else
   PROJECT_LINE="  configuration: '${CONFIGURATION}';"
   VERSION_LINE="  version: '$VERSION';"
-  REPOSITORY_LINE="  repository: '$REPOSITORY';"
   FULL_CONFIG_NAME="ConfigurationOf${CONFIGURATION}"
 fi
+
+if [ "${REPOSITORY}x" = "x" ]; then
+  echo "Must specify REPOSITORY"
+  exit 1
+fi
+REPOSITORY_LINE="  repository: '$REPOSITORY';"
 
 OUTPUT_PATH="${PROJECT_HOME}/tests/travisCI.st"
 
@@ -43,9 +49,6 @@ cat - >> $OUTPUT_PATH << EOF
 EOF
 
 cat $OUTPUT_PATH
-
-ls -altr *
-ls -altr */*
 
 $BUILDER_CI_HOME/testTravisCI.sh "$@"
 if [[ $? != 0 ]] ; then exit 1; fi

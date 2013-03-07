@@ -7,7 +7,7 @@ language: erlang
 #   Expect travisCI failure for #stable variant
 
 env:
-   - ST=Pharo-1.4 BASELINE=Sample LOADS="'default' 'Tests'"
+   - ST=Pharo-1.4 BASELINE=Sample LOADS="'default' 'Tests'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
    - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="github://dalehenrich/sample:configuration"
    - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="github://dalehenrich/sample:configuration"
 
