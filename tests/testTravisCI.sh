@@ -8,8 +8,8 @@
 #
 
 
-if [ "$CONFIGURATIONx" = "x" ]; then
-  if [ "$BASELINEx" = "x" ]; then
+if [ "${CONFIGURATION}x" = "x" ]; then
+  if [ "${BASELINE}x" = "x" ]; then
     echo "Must specify either BASELINE or CONFIGURATION"
     exit 1
   else
@@ -28,7 +28,7 @@ fi
 OUTPUT_PATH="${PROJECT_HOME}/tests/travisCI.st"
 
 cat - >> $OUTPUT_PATH << EOF
- Transcript cr; show: 'travis--->${OUTPUT_pATH}'.
+ Transcript cr; show: 'travis--->${OUTPUT_PATH}'.
  "Load the configuration or baseline"
  Metacello new
  $PROJECT_LINE
