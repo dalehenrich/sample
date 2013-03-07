@@ -28,7 +28,7 @@ fi
 OUTPUT_PATH="${PROJECT_HOME}/tests/travisCI.st"
 
 cat - >> $OUTPUT_PATH << EOF
- Transcript cr; show: 'travis--->${OUTPUT_pATH}'
+ Transcript cr; show: 'travis--->${OUTPUT_pATH}'.
  "Load the configuration or baseline"
  Metacello new
  $PROJECT_LINE
