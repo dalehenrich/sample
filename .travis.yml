@@ -3,6 +3,7 @@ language: erlang
 env:
    - ST=Pharo-1.4 BASELINE=Sample LOADS="'ALL'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
    - ST=Squeak-4.4 BASELINE=Sample LOADS="'ALL'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
+   - ST=GemStone-3.1.0.2 BASELINE=Sample LOADS="'ALL'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/packages"
 
 install:
    - export PROJECT_HOME="$(pwd)"
