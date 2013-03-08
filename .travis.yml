@@ -1,12 +1,12 @@
 language: erlang
 
 env:
-   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
-   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
-   - ST=Squeak-4.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
-   - ST=Squeak-4.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
-   - ST=GemStone-3.1.0.2 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
-   - ST=GemStone-3.1.0.2 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filtree://${TRAVIS_BUILD_DIR}"
+   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
+   - ST=Pharo-1.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
+   - ST=Squeak-4.4 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
+   - ST=Squeak-4.4 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
+   - ST=GemStone-3.1.0.2 CONFIGURATION=Sample LOADS="'Core' 'Tests'" VERSION="0.8.0" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
+   - ST=GemStone-3.1.0.2 CONFIGURATION=Sample LOADS="'Tests'" VERSION="0.9.1" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}"
 
 install:
    - export PROJECT_HOME="$(pwd)"
