@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #ConfigurationOfSample!
+SystemOrganization addCategory: #'ConfigurationOfSample'!

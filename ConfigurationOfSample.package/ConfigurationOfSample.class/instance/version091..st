@@ -1,14 +1,15 @@
 versions
 version091: spec
-    <version: '0.9.1'>
-
-    spec
-        for: #'common'
-        do: [ 
-            spec blessing: #'development'.
-            spec description: 'shiny new group spec "group:in:load:"'.
-            spec author: 'dkh'.
-            spec timestamp: 'dkh 6/25/2012 16:55'.
-            spec
-                baseline: 'Sample' with: [ spec repository: 'github://dalehenrich/sample:master/packages' ];
-                import: 'Sample' ]
+  <version: '0.9.1'>
+  spec
+    for: #'common'
+    do: [ 
+      spec blessing: #'development'.
+      spec description: '- fix Issue #3
+  https://github.com/dalehenrich/sample/issues/3'.
+      spec author: 'dkh'.
+      spec timestamp: '4/3/2013 16:26'.
+      spec
+        baseline: 'Sample'
+          with: [ spec repository: 'github://dalehenrich/sample:master/repository' ];
+        import: 'Sample' ]
