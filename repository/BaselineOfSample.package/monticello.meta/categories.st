@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfSample!
+SystemOrganization addCategory: #'BaselineOfSample'!
