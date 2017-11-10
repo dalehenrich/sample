@@ -4,9 +4,8 @@ Install [MetacelloPreview 1.0-beta.32][1], then:
 
 ```Smalltalk
 Metacello new
-  configuration: 'Sample';
-  version: #stable;
-  repository: 'github://dalehenrich/sample:configuration';
+  baseline: 'Sample';
+  repository: 'github://dalehenrich/sample/repository';
   load.
 ```
 
