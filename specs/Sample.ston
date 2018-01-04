@@ -1,0 +1,16 @@
+RwPackageLoadSpecification {
+	#specName : 'Sample',
+	#projectUrl : 'https://github.com/dalehenrich/sample',
+	#platformSpec : {
+		'gemstone' : RwGemStoneSpecification {
+			#symbolDictName : 'UserGlobals'
+		}
+	},
+	#specsPath : 'specs',
+	#repoSpec : RwGitRepositorySpecification {
+		#commitish : 'master',
+		#commitishType : 'branch'
+	},
+	#repoPath : 'repository',
+	#comment : ''
+}
