@@ -12,5 +12,9 @@ RwPackageLoadSpecification {
 		#commitishType : 'branch'
 	},
 	#repoPath : 'repository',
-	#comment : ''
+	#comment : '',
+	#packageNames : [
+		'Sample-Core',
+		'Sample-Tests'
+	]
 }
