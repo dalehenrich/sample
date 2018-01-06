@@ -8,8 +8,8 @@ RwPackageLoadSpecification {
 	},
 	#specsPath : 'specs',
 	#repoSpec : RwGitRepositorySpecification {
-		#commitish : 'master',
-		#commitishType : 'branch'
+		#committish : 'master',
+		#committishType : 'branch'
 	},
 	#repoPath : 'repository',
 	#comment : '',
