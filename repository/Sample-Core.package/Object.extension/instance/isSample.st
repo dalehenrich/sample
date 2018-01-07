@@ -1,3 +1,0 @@
-*sample-core
-isSample
-    ^ false
