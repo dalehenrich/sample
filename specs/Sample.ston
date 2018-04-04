@@ -1,10 +1,9 @@
-RwPackageLoadSpecification {
+ RwPackageProjectSpecification{
 	#specName : 'Sample',
 	#projectUrl : 'https://github.com/dalehenrich/sample',
 	#platformSpec : {
 		'gemstone' : RwGemStoneSpecification {
-			#symbolDictName : 'UserGlobals'
-		}
+			#defaultSymbolDictName : 'UserGlobals''		}
 	},
 	#specsPath : 'specs',
 	#repoSpec : RwGitRepositorySpecification {
@@ -13,7 +12,7 @@ RwPackageLoadSpecification {
 	},
 	#repoPath : 'repository',
 	#comment : '',
-	#packageNames : [
+	#packageNamesInLoadOrder : [
 		'Sample-Core',
 		'Sample-Tests'
 	]
