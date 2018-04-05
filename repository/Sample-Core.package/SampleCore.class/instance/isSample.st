@@ -1,6 +1,4 @@
 testing
 isSample
 
-	""
-
 	^ true
