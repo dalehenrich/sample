@@ -14,6 +14,7 @@
 	#repoPath : 'repository',
 	#comment : '',
 	#packageNamesInLoadOrder : [
+		'BaselineOfSample',
 		'Sample-Core',
 		'Sample-Tests'
 	]
