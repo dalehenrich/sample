@@ -3,7 +3,7 @@
 	#projectUrl : 'https://github.com/dalehenrich/sample',
 	#platformSpec : {
 		'gemstone' : RwGemStoneSpecification {
-			#defaultSymbolDictName : 'UserGlobals'}
+			#defaultSymbolDictName : 'SampleSymbolDict'}
 	},
 	#specsPath : 'specs',
 	#repoSpec : RwGitRepositorySpecification {
